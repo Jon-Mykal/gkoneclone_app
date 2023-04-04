@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, Button, TouchableOpacity, Pressable, StyleSheet } from 'react-native';
+import CustomButton from '../components/CustomButton';
 
-const StartPage = () => (
+const StartPage = ({ navigation }) => (
     <View style={{ backgroundColor: 'red', width: '100%', height: '100%' }}>
         <View style={{
             paddingTop: 150, alignItems: 'center'
@@ -15,11 +16,11 @@ const StartPage = () => (
             <Pressable style={{
                 backgroundColor: "white",
                 ...styles.buttonSolid
-            }}>
+            }} onPress={() => navigation.navigate('Create Account')}>
                 <Text style={{ color: 'red', fontWeight: "bold" }}>Create an account</Text>
             </Pressable>
             <View style={{ marginVertical: 8 }}></View>
-            <Pressable style={({ pressed }) => [
+            <Pressable onPress={() =>  navigation.navigate('Login')} style={({ pressed }) => [
                 {
                     backgroundColor: pressed ? 'white' : 'red',
                     transition: 'all ease .2s'
@@ -32,6 +33,7 @@ const StartPage = () => (
                     }>Log in</Text>)
                 }
             </Pressable>
+        
         </View>
     </View>
     /*<View>
