@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler'
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, Pressable } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -18,6 +19,7 @@ export default function App() {
         <Stack.Screen name="Login" component={LoginPage} options={{ headerShown: false}} />
         <Stack.Screen name="Dashboard" component={DashboardPage} options={{ headerShown: false}} />
       </Stack.Navigator>
+      {/* <StatusBar style="auto" /> */}
     </NavigationContainer>
 
     // <View style={styles.container}>
