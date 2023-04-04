@@ -9,7 +9,7 @@ const StartPage = ({ navigation }) => (
         }}>
             <Text style={{ fontSize: 25, color: "white" }}>Welcome to</Text>
             <Text style={{ fontSize: 40, color: "white", fontWeight: "bold" }}>
-                GK <Text style={{ color: "black" }}>One</Text>
+                CK<Text style={{ color: "black" }}>TWO</Text>
             </Text>
         </View>
         <View style={{ paddingTop: 10 }}>
