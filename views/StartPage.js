@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, Button, TouchableOpacity, Pressable, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, Pressable, StyleSheet } from 'react-native';
+import { Button } from '@react-native-material/core';
 import CustomButton from '../components/CustomButton';
 
 const StartPage = ({ navigation }) => (
@@ -33,7 +34,7 @@ const StartPage = ({ navigation }) => (
                     }>Log in</Text>)
                 }
             </Pressable>
-        
+            <Button title="Biometric" style={baseStyles.button} onPress={() => navigation.navigate('Biometric')}/>
         </View>
     </View>
     /*<View>
