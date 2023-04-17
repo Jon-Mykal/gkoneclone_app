@@ -7,6 +7,13 @@ import StartPage from './views/StartPage';
 import LoginPage from './views/LoginPage';
 import CreateAccountPage from './views/CreateAccountPage';
 import DashboardPage from './views/DashboardPage';
+import { LogBox } from 'react-native';
+import BiometricPage from './views/BiometricPage';
+
+LogBox.ignoreLogs([
+  "ViewPropTypes will be removed",
+"ColorPropType will be removed",
+])
 
 const Stack = createNativeStackNavigator();
 
@@ -17,7 +24,8 @@ export default function App() {
         <Stack.Screen name="Start" component={StartPage} options={{ headerShown: false}}/>
         <Stack.Screen name="Create Account" component={CreateAccountPage} />
         <Stack.Screen name="Login" component={LoginPage} options={{ headerShown: false}} />
-        <Stack.Screen name="Dashboard" component={DashboardPage} options={{ headerShown: false}} />
+        <Stack.Screen name="Dashboard" component={DashboardPage} options={{ headerShown: false}} /> 
+        <Stack.Screen name="Biometric" component={BiometricPage} options={{ headerShown: true}} /> 
       </Stack.Navigator>
       {/* <StatusBar style="auto" /> */}
     </NavigationContainer>
